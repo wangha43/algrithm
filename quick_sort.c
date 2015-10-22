@@ -34,20 +34,19 @@ void quickSort(int * a, int low, int high){
   
 int findPos (int * a, int low, int high){  
     int val = a[low];  
-  
     while(low < high){  
-        while(low < high && a[high] >= val){  
+        while(low < high && a[high] >= val){  //比标准小跳出循环 并赋值 相当于交换位置
             --high;  
         }  
         a[low] = a[high];  
   
-        while(low < high && a[low] <= val){  
+        while(low < high && a[low] <= val){  //比标准大跳出循环 并赋值 相当于交换位置
             ++low;  
         }  
         a[high] = a[low];  
     }  
-    a[low] = val;  
-    return low;  
+    a[low] = val;//最后得到的位置  
+    return low;  //返回
 }  
 int main(int argc, char **argv)
 {

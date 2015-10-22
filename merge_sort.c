@@ -101,10 +101,12 @@ void merge_sort(int *list, const int first, const int last)
 			{
 				tmp[index++] = (list[left_min] > list[right_min] ? list[right_min++] : list[left_min++]);
 			}
+			//若左边的还有较大的剩下	则赋值给list右边  
 			while( left_min < left_max )
 			{
-				list[--right_min] = list[--left_max];
+				list[--right_min] = list[--left_max];//右边的剩有较大的则不用转换
 			}
+			//将排好的从tmp中取出来
 			while( index > 0 )
 			{
 				list[--right_min] = tmp[--index];
