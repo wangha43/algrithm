@@ -47,6 +47,7 @@ void heapsort (int *a, int n) {
         int t = a[n - i - 1];
         a[n - i - 1] = a[0];
         a[0] = t;
+        //每次减少一个进行排查出最大值 从而得到一个有序序列
         downheap(a, n - i - 1, 0);
         for (int j = 0; j < n; j++)
             printf("%d%s", a[j], j == n - 1 ? "\n" : " ");
