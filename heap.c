@@ -23,6 +23,7 @@ void downheap (int *a, int n, int i) {
         a[i] = a[j];
         a[j] = t;
         i = j;//更换后i的索引 直到a[i]为最大堆或者子节点
+        printf("%d\n", j);
     }
 }
  
