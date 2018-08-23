@@ -116,6 +116,7 @@ void merge_sort(int *list, const int first, const int last)
 	}
 	free(tmp);
 }
+
 int main(int argc, char **argv)
 {
 	int len,i;
