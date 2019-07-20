@@ -89,8 +89,7 @@ static void do_epoll(int listenfd)
     close(epollfd);
 }
 
-static void
-handle_events(int epollfd,struct epoll_event *events,int num,int listenfd,char *buf)
+static void handle_events(int epollfd,struct epoll_event *events,int num,int listenfd,char *buf)
 {
     int i;
     int fd;
